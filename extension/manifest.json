@@ -1,0 +1,43 @@
+{
+  "name": "Codeforces++",
+  "description": "Codeforces extension pack",
+  "version": "2.4.1",
+  "manifest_version": 3,
+  "permissions": [
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://codeforces.com/*",
+    "http://fonts.googleapis.com/*",
+    "https://fonts.googleapis.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://codeforces.com/*"],
+      "js": ["contentScript.js"],
+      "css": ["common.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+  "service_worker": "background.js",
+  "type": "module"
+},
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Codeforces++"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["*.js"],
+      "matches": ["*://codeforces.com/*"]
+    }
+  ],
+  "icons": {
+    "16": "icons/16x16.png",
+    "32": "icons/32x32.png",
+    "48": "icons/48x48.png",
+    "128": "icons/128x128.png"
+  }
+}

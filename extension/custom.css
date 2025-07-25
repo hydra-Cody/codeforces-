@@ -1,0 +1,200 @@
+/* @import url('https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap'); */
+/* latin-ext */
+@font-face {
+    font-family: 'Libre Franklin';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Libre Franklin'), local('LibreFranklin-Regular'), url(https://fonts.gstatic.com/s/librefranklin/v4/jizDREVItHgc8qDIbSTKq4XkRiUR2zcLig.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Libre Franklin';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Libre Franklin'), local('LibreFranklin-Regular'), url(https://fonts.gstatic.com/s/librefranklin/v4/jizDREVItHgc8qDIbSTKq4XkRiUf2zc.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+a, a:visited, a:link, .contest-state-phase {
+    text-decoration: none !important;
+    /* color: #0000EE; */ /* default link color */
+    color: #2c63d5;
+}
+.titled, .caption {
+    color: #2c63d5 !important;
+}
+
+/* Very specific selectors so we get priority over the default font */
+body *,
+body>div p,
+body>div li,
+body>div th,
+body>div span:not(.tex-span),
+body>div .problem-statement .header .title,
+body>div .problem-statement .section-title,
+body>div .problem-statement .sample-tests,
+body>div .ttypography p,
+body>div .second-level-menu-list li,
+body>div td {
+    font-family: 'Libre Franklin', 'Roboto', sans-serif;
+}
+
+body>div div.ttypography pre,
+body>div pre.prettyprint li,
+body>div code.prettyprint span:not(.tex-span),
+body>div pre.prettyprint span:not(.tex-span) {
+    font-family: monospace;
+}
+
+/* div p, .problem-statement .header .title, div.time-limit, div.memory-limit, */
+/* div.input-file, div.output-file, div a, div div, div */
+/* span:not(.tex-span), * { */
+/*     font-family: 'Libre Franklin', 'Roboto', sans-serif; */
+/* } */
+
+/* Put smallcaps on the navbar */
+.menu-list-container a {
+    text-transform: none !important;
+    font-variant: small-caps;
+}
+
+/* Remove CF's image borders */
+.roundbox-lt, .roundbox-lb, .roundbox-rt, .roundbox-rb,
+.lt, .lb, .rt, .rb,
+.ilt, .ilb, .irt, .irb {
+    display: none;
+}
+/* Replace them by real borders */
+.roundbox {
+    border-radius: 6px;
+    overflow: hidden;
+    border: none !important;
+    box-shadow: 1px 1px 5px rgba(108, 108, 108, 0.17);
+}
+.titled {
+    border: none !important;
+}
+
+/* Remove borders between cells on tables */
+table th, table td {
+    border: none !important;
+}
+
+/* Better table border color */
+.datatable {
+    background-color: #f8f8f8 !important;
+}
+
+/* Remove borders on profile page */
+.title-photo div:first-child, .userbox {
+    border: none !important;
+}
+
+/* Make .nav-links prettier */
+.nav-links li {
+    list-style: none !important;
+}
+
+/* Weird thing on nav menus that move with the mouse */
+.backLava {
+    display: none !important;
+}
+
+/* Better buttons */
+input[type=submit] {
+    background: #d2d2d245;
+    border: none;
+    border-bottom: 3px solid #b6b6b678;
+    padding: 0.4em 1.1em !important;
+    border-radius: 6px;
+    cursor: pointer;
+}
+input[type=submit]:active {
+    border-bottom: 1px solid #b6b6b678;
+}
+
+/* Better selects */
+.submitForm input, .submitForm select {
+    border: none;
+}
+
+/* Copy button */
+.input-output-copier {
+    text-transform: lowercase;
+    font-variant: small-caps;
+    border: none;
+}
+
+/* Weird divisors next to the Logout button */
+.lang-chooser {
+    font-size: 0;
+}
+.lang-chooser a {
+    font-size: small;
+    margin-left: 0.3em;
+}
+
+/* Better problem statement */
+.problem-statement {
+    margin: 0 !important; /* why did it have a 4-side margin in first place?? */
+}
+.problem-statement .property-title {
+    display: none !important;
+}
+.problem-statement .header .title {
+    font-size: 200% !important;
+    margin-bottom: 0 !important;
+}
+.problem-statement .header {
+    margin: 2.5em 0 1.5em !important;
+    text-align: left !important;
+}
+.problem-statement .header>div {
+    display: inline-block !important;
+    margin-right: 0.5em;
+}
+.problem-statement .header>div:not(.title) {
+    color: #9E9E9E;
+}
+.problem-statement .header>div:not(:last-child)::after {
+    content: ",";
+}
+div.ttypography p, .sample-test {
+    margin-bottom: 1.5em !important;
+}
+.problem-statement .section-title {
+    font-size: 150%;
+    margin-bottom: 0.25em;
+}
+
+.source-and-history-div {
+    border: none;
+}
+#facebox {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50% , -50%);
+}
+
+/* Background */
+html {
+    background: #f2f2f2;
+}
+body {
+    background: inherit !important;
+    margin: 0;
+}
+
+#pageContent {
+    background: white;
+    padding: 1.5em !important;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px rgba(108, 108, 108, 0.17);
+}
+.problem-statement .header, div.ttypography {
+    margin: 0 0 1em !important;
+}

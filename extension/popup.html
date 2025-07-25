@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Codeforces++ Background Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            width: 256px;
+            padding: 0.75em;
+        }
+        .dark {
+            background: #121212;
+            color: #eee;
+            border: 2px solid #eee;
+            border-radius: 6px;
+        }
+
+        #ui {
+            font-size: 1.15em;
+        }
+        #ui>label {
+            position: relative;
+            margin-bottom: 0.5em;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        #ui input[type=text], #ui input[type=number] {
+            width: 32%;
+        }
+        #ui input[type=checkbox] {
+            visibility: hidden;
+        }
+        #ui .toggle>span {
+            position: absolute;
+            width: 0.9rem;
+            height: 0.9rem;
+            top: calc(50% - 0.45rem);
+            right: 0;
+            display: inline-block;
+            border: thin solid #188ecd;
+            border-radius: 100%;
+            background: #eee;
+            transition: background 0.2s;
+        }
+        #ui .toggle>input:checked + span {
+            background: #188ecd;
+        }
+        #ui .toggle>span:before {
+            content: "✓";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #eee;
+            font-size: 0.8em;
+        }
+
+        label {
+            user-select: none;
+        }
+
+        #logo {
+            width: 5rem;
+        }
+
+        .centered {
+            text-align: center;
+        }
+
+        .hr {
+            display: block;
+            border-top: 1px solid #7f7f7f52;
+            width: 100vw;
+            margin: .5em -0.75em;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="centered">
+        <img id="logo" src="icons/cf++ logo.svg" alt="Something else is supposed to be here">
+    </div>
+
+    <script src="/browser-polyfill.min.js"></script>
+    <script src="/popup.js"></script>
+
+</body>
+</html>
